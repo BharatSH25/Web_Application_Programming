@@ -1,0 +1,129 @@
+.top-bar [class*='col'].bg-primary::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 20rem;
+  height: 100%;
+  top: 0;
+  left: -20rem;
+  background: #293ce0;
+}
+
+.footer-link {
+  color: #6c757d;
+  transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: #1336e1;
+  text-decoration: none;
+}
+
+.text-small {
+  font-size: 0.85rem !important;
+}
+
+.bg-cover {
+  background-size: cover !important;
+  background-position: center center !important;
+}
+
+.bg-center {
+  background-position: 50% 50% !important;
+}
+
+.list-check li::before {
+  content: '\f058';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #ff3f3f;
+  font-family: 'Font Awesome\ 5 Free';
+  font-weight: 900;
+}
+
+/*
+ * 2. BUTTONS
+ */
+.btn {
+  font-weight: 700;
+  border: 2px solid transparent;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn:focus,
+.btn.focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 63, 63, 0.25);
+} 
+
+.btn-outline-primary {
+  color: #293ce0;
+  background-color: transparent;
+  background-image: none;
+  border-color: #ff3f3f;
+}
+
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: #293ce0;
+  border-color: #ff3f3f;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #111;
+  background-color: #fff;
+}
+
+a {
+  color: #ff3f3f;
+  text-decoration: none;
+}
+
+h2,h4,h6 {
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 1.2;
+  color: inherit;
+}
+
+/*
+* 5. UTILITIES
+*/
+.bg-primary {
+  background-color: #293ce0 !important;
+}
+
+.text-primary {
+  color: #ff3f3f !important;
+}
+
+/*
+  * 6. FORMS
+  */
+.form-control {
+  padding: 1.5rem 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 0;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+
+

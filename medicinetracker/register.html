@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Medicine Tracker</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.2/bootstrap.min.css">
+	<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+	<link rel="stylesheet" type="text/css" href="styles/responsive.css">
+  <style>
+   h2
+   {
+     color:rgb(237, 96, 45);
+     text-align: center;
+     margin-top: 50px;
+   }
+   h6
+   {
+    color: black;
+   }
+   body
+   {
+     background-color: azure;
+   }
+
+    
+  </style>
+
+</head>
+
+<body>
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class='fas fa-caret-square-up'
+      style='font-size:28px;color:red'></i></button>
+  
+      <header class="header">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="header_content d-flex flex-row align-items-center justify-content-start trans_400">
+                <a href="#">
+                  <div class="logo d-flex flex-row align-items-center justify-content-start">
+                    <div>Medication Tracker</div>
+                  </div>
+                </a>
+                <nav class="main_nav">
+                  <ul class="d-flex flex-row align-items-center justify-content-start">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Profile</a></li>
+                    <!--	<li><a href="testimonial.html">Testimonial</a></li>
+                  -->
+                    <li><a href="login.html">Login</a></li>
+                  </ul>
+                </nav>
+                <div class="signin d-flex flex-row align-items-center justify-content-start ml-auto">
+                  <i class="fa fa-sign-in" aria-hidden="true"></i>
+                  <div>sign in</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+  <section class="py-5 shadow-sm index-forward">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-lg-8 mb-5 mb-lg-0 offset-lg-2">
+          <header>
+            <h2><b>Registration</b></h2>
+            <br>
+            <h6><b>Already have an account?</b><a href="login.html">Click here</a></h6>
+          </header>
+          <div class="pt-1 bg-primary">
+            <div class="p-4 p-lg-7 bg-white shadow-sm">
+              <form method="post" action="" onsubmit="validateForm">
+                <div class="row">
+                  <div class="form-group col-lg-6">
+                    <br><input class="form-control" type="text" name="cu_name" id="cu_name" placeholder="Full name"
+                      autocomplete=off>
+                    <span id="cu_name_error"></span>
+                  </div>
+                  <div class="form-group col-lg-6">
+                    <br><input class="form-control" type="text" name="cu_contact" id="cu_contact"
+                      placeholder="Phone number" autocomplete=off>
+                    <span id="cu_contact_error"></span>
+                  </div>
+                  <div class="form-group col-lg-6">
+                    <br><input class="form-control" type="text" name="cu_designation" id="cu_designation"
+                      placeholder="Designation" autocomplete=off>
+                    <span id="cu_designation_error"></span>
+                  </div>
+                  <div class="form-group col-lg-6">
+                    <br><input class="form-control" type="text" name="cu_email" id="cu_email" placeholder="Email"
+                      autocomplete=off>
+                    <span id="cu_email_error"></span>
+                  </div>
+                  <div class="form-group col-lg-12">
+                    <br> <textarea class="form-control" name="cu_address" id="cu_address" rows="2"
+                      placeholder="Enter Complete Address" autocomplete=off></textarea><br>
+                    <span id="cu_address_error"></span>
+                  </div>
+                  <div class="form-group col-lg-12">
+                    <div class="input-group">
+                      <br><input type="password" class="form-control" placeholder="Enter Password" id="cu_password"
+                        name="cu_password">
+                      <div class="input-group-btn">
+                        <button class="btn btn-default" type="button" onclick="showPassword();"
+                          style="border: 1px solid #ccd6e6;border-radius: 0;">
+                          <i class="fa fa-eye-slash"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <span id="cu_password_error"></span>
+                    <br>
+
+                  </div>
+                  <div class="form-group col-lg-12">
+                    <br><button  class="btn btn-outline-primary btn-block" ><a
+                        href="index.html"></a>Register</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="pt-1 bg-primary"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+
+  <script type="text/javascript">
+    var ch_num = /[6-9]{1}-[0-9]{9}/
+    var ch_mail = /^[a-zA-Z0-9]{3,20}@gmail.com$/
+    var ch_pass = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/
+
+    function check() {
+      var m_num = form.cu_contact.value;
+      var mail = form.cu_mail.value;
+      var pwd = form.cu_password.value;
+      if ((ch_num.test(m_num)) && (ch_mail.test(mail)) && ch_pass.test(pwd)) {
+        window.location.href = "index.html";
+      } else {
+        alert("Wrong Mobile NO. or Email-Address or Password")
+      }
+    }
+
+    function showPassword() {
+      var x = document.getElementById("cu_password");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+    </script>
+
+  <!--footer-->
+    <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="footer_container">
+            <div class="footer_content">
+              <div class="footer_logo">
+                <a href="#">
+                  <div class="logo d-flex flex-row align-items-center justify-content-center">
+                    <div>Medicine Tracker</div>
+                  </div>
+                </a>
+              </div>
+              <nav class="footer_nav">
+                <ul
+                  class="d-flex flex-sm-row flex-column align-items-sm-start align-items-center justify-content-center">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About us</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                </ul>
+              </nav>
+              <div class="newsletter_container">
+                <form action="#" id="newsletter_form" class="newsletter_form">
+                  <input type="text" class="newsletter_input" placeholder="Enter your email here" required="required">
+                  <button class="newsletter_button">go</button>
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

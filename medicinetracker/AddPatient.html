@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Medicine Tracker</title>
+<!--	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<link href="css/app.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+	<style>
+		.navbar-bg
+		{
+			background-color: rgb(9, 9, 6);
+		}
+		footer.footer{
+			background-color: black;
+		}
+		.text-muted{
+			color:white;
+		}
+	</style>
+	</head>
+
+<body>
+
+		<div class="main">
+			<nav class="navbar navbar-expand navbar-light navbar-bg">
+				<a class="sidebar-toggle d-flex" href="index.html">
+					<i class="hamburger align-self-center" >  </i>
+				</a>
+
+
+				<div class="navbar-collapse collapse">
+					<ul class="navbar-nav navbar-align">
+
+						<li class="nav-item dropdown">
+							<div class=" text-center">
+								<div class="mb-3">
+									<div class="btn-group">
+										<button type="button" class="btn btn-primary " id="btn-logout">
+											Logout
+										</button>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+			<main class="content">
+				<div class="container-fluid p-0">
+
+					<h1 class="h3 mb-3">Add Patient Record</h1>
+
+					<div class="row">
+						<div class="col-md-3 col-xl-2">
+
+							<div class="card">
+								<div class="card-header">
+									<h3 class="card-title mb-0">Patient Details</h3>
+								</div>
+
+								<div class="list-group list-group-flush" role="tablist">
+									<a class="list-group-item list-group-item-action active" data-bs-toggle="list"
+										href="#account" role="tab"> Patient Info </a>
+									<a class="list-group-item list-group-item-action" data-bs-toggle="list"
+										href="#Duration" role="tab">Duration</a>
+									<a class="list-group-item list-group-item-action" data-bs-toggle="list"
+										href="#MedicineRecord" role="tab">Medicine Record</a>
+									<a class="list-group-item list-group-item-action" data-bs-toggle="list"
+										href="#Doctordetails" role="tab">Doctors Details </a>
+									<a class="list-group-item list-group-item-action" data-bs-toggle="list"
+										href="#Registerpatient" role="tab">Register Patient </a>
+
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-9 col-xl-10">
+							<div class="tab-content">
+								<div class="tab-pane fade show active" id="account" role="tabpanel">
+
+									<div class="card">
+										<div class="card-header">
+
+											<h5 class="card-title mb-0">Patient information</h5>
+										</div>
+										<div class="card-body">
+											<form>
+												<div class="row">
+													<div class="col-md-8">
+														<div class="mb-3">
+															<label class="form-label" for="inputUsername">Patient
+																ID</label>
+															<input type="text" class="form-control" id="patientid"
+																placeholder="Patient ID">
+														</div>
+														<div class="mb-3">
+															<label class="form-label" for="inputUsername">Patient
+																Name</label>
+															<input type="text" class="form-control" id="patientname"
+																placeholder="Patient Name">
+														</div>
+														<div class="mb-3">
+															<label class="form-label" for="inputUsername">Pre Medical
+																Data</label>
+															<textarea rows="2" class="form-control" id="patientmedrec"
+																placeholder="Patients pre-medical Condition"></textarea>
+														</div>
+													</div>
+												</div>
+											</form>
+
+										</div>
+									</div>
+
+									<div class="card">
+										<div class="card-header">
+
+											<h5 class="card-title mb-0">Contact information</h5>
+										</div>
+										<div class="card-body">
+											<form>
+												<div class="row">
+													<div class="mb-3 col-md-6">
+														<label class="form-label" for="inputFirstName">First
+															name</label>
+														<input type="text" class="form-control" id="FirstName"
+															placeholder="First name">
+													</div>
+													<div class="mb-3 col-md-6">
+														<label class="form-label" for="inputLastName">Last name</label>
+														<input type="text" class="form-control" id="LastName"
+															placeholder="Last name">
+													</div>
+												</div>
+												<div class="mb-3">
+													<label class="form-label" for="Age">Age</label>
+													<input type="contactnumber" class="form-control" id="age"
+														placeholder="Age">
+												</div>
+												<div class="mb-3">
+													<label class="form-label" for="Gender">Gender</label>
+													<select class="form-control mb-3" id="gender">
+														<option selected>Open this select menu</option>
+														<option>Male</option>
+														<option>Female</option>
+														<option>Others</option>
+													</select>
+												</div>
+												<div class="mb-3">
+													<label for="Date of birth" class="form-label">Date-OF-Birth</label>
+													<input class="form-control" type="date" value="2021-05-09" id="dob">
+												</div>
+												
+												<div class="mb-3">
+													<label class="form-label" for="contact number">Contact Number
+													</label>
+													<input type="contactnumber" class="form-control" id="contact-no2"
+														placeholder="Contact Number">
+												</div>
+
+												
+												<div class="mb-3">
+													<label class="form-label" for="inputAddress">Address</label>
+													<input type="text" class="form-control" id="Pat-Address"
+														placeholder="1234 Main St">
+												</div>
+												<div class="row">
+													<div class="mb-3 col-md-6">
+														<label class="form-label" for="inputCity">City</label>
+														<input type="text" class="form-control" id="Pat-City">
+													</div>
+													<div class="mb-3 col-md-4">
+														<label class="form-label" for="inputState">State</label>
+														<input type="text" class="form-control" id="Pat-State">
+													</div>
+													<div class="mb-3 col-md-2">
+														<label class="form-label" for="inputZip">Zip</label>
+														<input type="text" class="form-control" id="inputZip">
+													</div>
+												</div>
+
+											</form>
+
+										</div>
+									</div>
+
+								</div>
+	
+								<div class="tab-pane fade" id="Duration" role="tabpanel">
+									<div class="card">
+										<div class="card-body">
+											<h5 class="card-title">Treatment Duration</h5>
+
+											<form>
+												<div class="mb-3">
+													<label for="Treatment start" class="form-label">Treatment Start
+														Date</label>
+													<input class="form-control" type="date" value="2021-05-09"
+														id="tret-start">
+												</div>
+												<div class="mb-3">
+													<label for="Treatment start" class="form-label">Treatment End
+														Date</label>
+													<input class="form-control" type="date" value="2021-05-09"
+														id="tret-End">
+												</div>
+												<div class="mb-3">
+													<label class="form-label" for="Treatment Duration">Treatment
+														Duration</label>
+													<input type="text" class="form-control" id="tret-Duration"
+														placeholder=" Enter the duration in months">
+												</div>
+
+											</form>
+
+										</div>
+									</div>
+								</div>
+
+								<div class="tab-pane fade" id="Doctordetails" role="tabpanel">
+									<div class="card">
+										<div class="card-body">
+											<h5 class="card-title">Doctor Details</h5>
+
+											<form>
+
+												<div class="mb-3">
+													<label class="form-label" for="Doctor Name">Doctor Name</label>
+													<input type="text" class="form-control" id="Doctor-Name"
+														placeholder="Doctor's Name">
+												</div>
+												<div class="mb-3">
+													<label class="form-label" for="Doctor Name"> Contact Number</label>
+													<input type="text" class="form-control" id="Doc-Num"
+														placeholder="Contact number">
+												</div>
+												<div class="mb-3">
+													<label class="form-label" for="Hospital name">Hospital Name</label>
+													<input type="text" class="form-control" id="HospitalName"
+														placeholder="Hospital Name">
+												</div>
+												<div class="mb-3">
+													<label class="form-label" for="Hospital Location">Hospital
+														Location</label>
+													<input type="text" class="form-control" id="Hospital-Location"
+														placeholder="Hospital Location">
+												</div>
+
+											</form>
+
+										</div>
+									</div>
+								</div>
+
+								<div class="tab-pane fade" id="Registerpatient" role="tabpanel">
+									<div class="card">
+										<div class="card-body">
+											<h5 class="card-title">Treatment Details</h5>
+
+											<form>
+												<div class="mb-3">
+													<label class="form-label" for="Hospital Location">Check all the
+														details of the patients </label>
+
+												</div>
+
+												<button type="submit" class="btn btn-primary" id="addpatient">Add
+													Patient </button>
+											</form>
+
+										</div>
+									</div>
+								</div>
+
+
+
+								<div class="tab-pane fade" id="MedicineRecord" role="tabpanel">
+									<div class="card">
+										<div class="card-body">
+											<h5 class="card-title">Medicine Record</h5>
+
+											<form>
+
+												<div class="mb-3">
+													<label class="form-label" for="Disease"> Reason for Treatment
+													</label>
+													<input type="text" class="form-control" id="pre-Disease"
+														placeholder=" Enter the name of the condition">
+												</div>
+
+												<div class="mb-3">
+													<label class="form-label" for="Gender">Patients Condition</label>
+													<select class="form-control mb-3" id="pat-Condition">
+														<option selected>Open this select menu</option>
+														<option>High Risk</option>
+														<option>Attention Needed</option>
+														<option>Low Risk</option>
+													</select>
+												</div>
+
+												<div class="mb-3">
+													<label for="example-time-input" class="form-label">Prescription
+														timing</label>
+													<input class="form-control" type="time" value="00:00:00"
+														id="pres-Timing">
+												</div>
+
+												<div class="mb-3">
+													<label class="form-label" for="Gender">Medication Hours</label>
+													<select class="form-control mb-3" id="pres-Dur">
+														<option selected>Open this select menu</option>
+														<option>Morning</option>
+														<option>Afternoon</option>
+														<option>Night</option>
+														<option>Morning & Night</option>
+														<option>12 hours</option>
+														<option>8 hours</option>
+													</select>
+												</div>
+											</form>
+										</div>
+									</div>
+
+								<!--	</form>  -->
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+		</div>
+
+	</div>
+	</main>
+
+	<footer class="footer">
+		<div class="container-fluid">
+			<div class="row text-muted">
+				<div class="col-6 text-start">
+					<p class="mb-0">
+						<a href="home.html" class="text-muted"><strong>Medicine Tracker</strong></a>
+					</p>
+				</div>
+				<div class="col-6 text-end">
+					<ul class="list-inline">
+						<li class="list-inline-item">
+							<a class="text-muted" href="#">Support</a>
+						</li>
+						<li class="list-inline-item">
+							<a class="text-muted" href="#">Help Center</a>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	</div>
+	</div>
+
+
+	
+	<script src="js/app.js"></script>
+
+	<script src="js/index.js"></script>
+
+</body>
+
+</html>
